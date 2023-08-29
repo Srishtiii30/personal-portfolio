@@ -1,0 +1,348 @@
+*{
+    margin: 0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: black;
+    color:black;
+}
+#header {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 140px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    color:white
+}
+nav ul li a{
+    color:white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: ' ';
+    width: 0;
+    height:3px;
+    background: rgb(45, 229, 232);
+    position: absolute;
+    left:0;
+    bottom: -6px;
+    transition:0.5s;
+    color: white;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+ul li::before {
+    color: white;
+}
+.home-content {
+    display: flex;
+    justify-content: space-between; /* Space between text and pic */
+    align-items: center;
+}
+
+.home-pic img {
+    max-width: 100%; /* Make sure the image doesn't overflow */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px;
+    
+}
+
+.home-text {
+    flex-basis: 50%;
+    color: white;
+    font-size: 30px;
+    text-align: left; /* Align text to the left */
+}
+
+.home-text span {
+    color: rgb(45, 229, 232);
+}
+
+/* Adjustments for smaller screens (optional) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack elements on smaller screens */
+    }
+
+    .home-text,
+    .home-pic {
+        flex-basis: 100%; /* Make both elements full width on smaller screens */
+        margin: 20px 0; /* Add some spacing between them */
+        text-align: center; /* Center text on smaller screens */
+    }
+}
+
+
+
+#about{
+    padding: 80px 0;
+    color: white;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col1{
+    flex-basis: 35%;
+}
+.about-col1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col2{
+    flex-basis: 60%;
+}
+.about-text{
+    font-style: italic;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 700;
+    color: white;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(45, 229, 232);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+    color: white;
+}
+.tab-contents ul li span{
+    color: rgb(45, 229, 232);
+    font-size: 16px;
+}
+.tab-contents{
+    display: none;
+    color: white;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+
+
+#skills{
+    padding: 20px 0;
+    color: white;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax(250px,1fr));
+    grid-gap: 30px;
+    margin-top: 40px;
+}
+.services-list div{
+    background: rgb(45, 229, 232);
+    padding: 30px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+.services-list div i{
+    color: white;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    color: rgb(255, 0, 166);
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background: rgb(67, 65, 65);
+    transform: translateY(-10px);
+}
+
+
+
+#portfolio{
+    padding: 50px 0;
+}
+.work-list{
+    display: flex;
+    grid-template-columns: repeat(autofit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+.work img{
+    width: 500px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    transition: transform 0.5s;
+}
+.layer{
+    padding: 0 40px;
+    width: 500px;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), rgb(45, 229, 232));
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: rgb(149, 110, 52);
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+
+.work:hover .layer{
+    height: 100%;
+}
+
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+    color: white;
+}
+.contact-left p i{
+    color: rgb(45, 229, 232);
+    margin-right: 15px;
+    font-size: 25px;
+}
+.subtitle{
+    color: white;
+}
+.social-icons{
+    margin-top: 30px;
+    padding: 15px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: white;
+    display: inline-block;
+}
+.social-icons a:hover{
+    color: rgb(45, 229, 232);
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: rgb(45, 229, 232);
+    padding: 10px;
+    border-radius: 5%;
+}
+.contact-right form{
+    width:100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: rgb(255, 255, 255);
+    padding: 15px;
+    margin: 15px 0;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: grey;
+    font-weight: 300;
+    margin-top: 20px;
+}
