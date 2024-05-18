@@ -24,23 +24,19 @@
           <div class="home-content">
               <div class="home-text">
                   <p> Student </p>
-                  <h1> Hi, I'm <span>Srishti Shetty</span> </h1>
+                  <h1> Hi, I'm <br><span>Srishti Shetty</span> </h1>
               </div>
               <div class="home-pic">
-                  <img src="imgs\homepic.jpg" height="480px" style="max-width: 350px;">
+                  <img src="imgs/homepic.jpg" alt="Home Picture">
               </div>
           </div>
       </div>
   </div>
   
-
-
     <div id="about">
       <div class="container">
         <div class="row">
-          <div class="about-col1">
-            <img src="imgs/myaboutpic.jpeg" height="480px">
-          </div>
+          
             <div class="about-col2">
                 <h1 class="sub-title"><ul>About me</ul></h1>
                 <p class="about-text">I am a third year engineering student pursuing Information Science and Engineering. I like problem solving and software development. Mathematics is one of my key strengths. </p>
@@ -58,7 +54,6 @@
                     <li>Java</li>
                     <li>Java-Swing</li>
                     <li>UI/UX</li>
-                  
                   </ul>
                 </div>
                 <div class="tab-contents" id="education">
@@ -69,7 +64,6 @@
                   </ul>
                 </div>
             </div>
-          
         </div>
       </div>
     </div>
@@ -89,55 +83,34 @@
         </div>
       </div>
     </div>
-    
-
-
     <div id="portfolio">
       <div class="container">
         <h1 class="sub-title">Projects</h1>
         <div class="work-list">
-          <div class="row">
-          <div class="work">
-            <img src="imgs\tandt.png">
-          <div class="layer">
-              <h2>Tours and Travels website</h2>
-              <p> The website is my version of a make my trip dummy</p>
-              <a href="https://github.com/Srishtiii30/tours-and-travels.git"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-          </div>
-          <div class="work">
-            <img src="imgs\multit.png">
+          <a href="https://github.com/Srishtiii30/tours-and-travels.git" target="_blank" class="work">
+            <img src="imgs/tandt.png" alt="Tours and Travels website">
             <div class="layer">
-              <h2>Expense tracker using multi-threading</h2>
-              <p> An expense tracker which will help you track your overall expenses</p>
-              <a href="https://github.com/Srishtiii30/Expense-tracker.git"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <h2>Tours and Travels <br>website</h2>
+              <p>The website is my version of a make my trip dummy</p>
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="work">
-            <img src="imgs\Travelagency.png">
+          </a>
+          <a href="https://github.com/Srishtiii30/Expense-tracker.git" target="_blank" class="work">
+            <img src="imgs/multit.png" alt="Expense tracker using multi-threading">
             <div class="layer">
-            <h2>Travel Agency website</h2>
-            <p> The website allows you to book a trip and stores the necessary information on the database</p>
-            <a href="https://github.com/Srishtiii30/travel-agency.git"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <h2>Expense tracker using <br>multi-threading</h2>
+              <p>An expense tracker which will help you track your overall expenses</p>
             </div>
-          </div>
-          <div class="work">
-            <img src="https://th.bing.com/th?id=OIP.o570cfet5lkE0AmXDk52nAHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2">
+          </a>
+          <a href="https://github.com/Srishtiii30/travel-agency.git" target="_blank" class="work">
+            <img src="imgs/Travelagency.png" alt="Travel Agency website">
             <div class="layer">
-            <h2>-</h2>
+              <h2>Travel Agency website</h2>
+              <p>The website allows you to book a trip and stores the necessary information on the database</p>
             </div>
-          </div>
+          </a>
         </div>
-      </div>
-        </div>
-
       </div>
     </div>
-
-
-
 
     <div id="contact">
       <div class="container">
@@ -152,7 +125,7 @@
                 <a href="https://github.com/Srishtiii30"><i class="fa fa-github" aria-hidden="true"></i></a>
                 <a href="https://instagram.com/srishtiiishetty?igshid=OGQ5ZDc2ODk2ZA=="><i class="fa-brands fa-instagram"></i></a>
               </div>
-              <a href="imgs\SrishtiShettyCV.pdf" download="" class="btn btn2">Download CV </a>
+              <a href="imgs/SrishtiShettyCV.pdf" download="" class="btn btn2">Download CV </a>
             </div>
             <br>
             <div class="contact-right">
@@ -165,7 +138,6 @@
         <p> Copyright @ Srishti Shetty </p>
       </div>
     </div>
-
 
     <script>
       var tablinks = document.getElementsByClassName("tab-links");
@@ -180,9 +152,7 @@
         }
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
-
       }
-
     </script>
    
    <script>
@@ -195,7 +165,6 @@
         .then(response => response.json())
         .then(data => {
             console.log(data.message);
-            // Optionally, perform any other actions after successful submission
         })
         .catch(error => console.error('Error: ', error));
     }
