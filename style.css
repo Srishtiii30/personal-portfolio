@@ -329,6 +329,10 @@ body {
     color: #bbb;
 }
 
+.contact-right p i {
+    color: #fff; /* Change icon color to white */
+}
+
 .social-icons a {
     color: #fff;
     margin-right: 10px;
