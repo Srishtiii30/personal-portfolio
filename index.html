@@ -40,26 +40,27 @@
           <h1 class="sub-title"><ul>About me</ul></h1>
           <p class="about-text">I am a third year engineering student pursuing Information Science and Engineering. I like problem solving and software development. Mathematics is one of my key strengths.</p>
           
-          <div class="tab-titles">
-            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-            <p class="tab-links" onclick="opentab('education')">Education</p>
-          </div>
-          <div class="tab-contents active-tab" id="education">
-            <ul>
-              <li>HTML & CSS</li>
-              <li>SQL</li>
-              <li>JavaScript</li>
-              <li>C programming</li>
-              <li>Java</li>
-              <li>Java-Swing</li>
-              <li>UI/UX</li>
-            </ul>
-          </div>
           <div class="tab-contents" id="education">
+            <h2>Education</h2>
             <ul>
               <li>M S Ramaiah Institute of Technology, Bangalore <br> <span>2021-25</span></li>
               <li>Sri Chaitanya PU College, Mangalore <br> <span>2019-21</span></li>
               <li>Lourdes Central School, Mangalore <br> <span>2007-19</span></li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="skills">
+            <h2>Skills</h2>
+            <ul>
+              <li>C programming</li>
+              <li>Java</li>
+              <li>Java-Swing</li>
+              <li>UI/UX</li>
+              <li>HTML & CSS</li>
+              <li>SQL</li>
+              <li>DSA</li>
+              <li>Python</li>
+              <li>Unix</li>
+              <li>Swift</li>
             </ul>
           </div>
         </div>
@@ -67,7 +68,7 @@
     </div>
   </div>
 
-    <div id="skills">
+    <div id="internships">
       <div class="container">
         <h1 class="sub-title">Internships</h1>
         <div class="services-list">
@@ -139,21 +140,6 @@
       </div>
     </div>
 
-    <script>
-      var tablinks = document.getElementsByClassName("tab-links");
-      var tabcontents = document.getElementsByClassName("tab-contents");
-    
-      function opentab(tabname){
-        for(tablink of tablinks){
-          tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-          tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-      }
-    </script>
    
    <script>
     function submitForm() {
