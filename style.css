@@ -338,7 +338,7 @@ body {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background: #77aaff;
+    background: linear-gradient(135deg, rgb(255, 191, 112) 0%, #fda085 100%);
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
