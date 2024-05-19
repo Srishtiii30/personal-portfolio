@@ -130,6 +130,10 @@ body {
     text-align: center;
 }
 
+.about-text {
+    font-size: 1.2em;
+}
+
 .about-col2 {
     padding: 20px;
     background: rgba(255, 255, 255, 0.1);
@@ -139,6 +143,12 @@ body {
     text-align: center;
 }
 
+.sub-title {
+    font-size: 2.5em; /* Big font size for "About me" */
+    margin-bottom: 20px;
+    color: #000000;
+    text-align: center; /* Center-align the "About me" heading */
+}
 
 .about-col2 h1 { /* Big font size for "About me" */
     margin-bottom: 20px;
@@ -149,6 +159,7 @@ body {
     font-size: 1.5em; /* Smaller font size for "Education" and "Skills" */
     margin-bottom: 20px;
     color: #000000;
+    text-align: center;
 }
 
 .about-col2 p,
